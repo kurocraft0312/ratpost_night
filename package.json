@@ -1,0 +1,23 @@
+{
+  "name": "ratpost_night",
+  "version": "1.0.0",
+  "description": "Night WordPress theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurocraft0312/ratpost_night.git"
+  },
+  "keywords": [
+    "ratpost_night",
+    "WordPress theme"
+  ],
+  "author": "kurocraft0312",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kurocraft0312/ratpost_night/issues"
+  },
+  "homepage": "https://github.com/kurocraft0312/ratpost_night#readme"
+}
