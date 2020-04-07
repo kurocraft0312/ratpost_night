@@ -38,7 +38,8 @@ header
 #title-header {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    width: 80%;
 }
 .cv-top {
     display: flex;
@@ -53,9 +54,24 @@ header
     color: #ffffff;
 }
 .g_nav {
-    /* position: fixed; */
-    /* display: flex;
-    justify-content: space-between; */
+    display: flex;
+    /* justify-content: space-around; */
+    background-color: #808080;
+}
+.g_nav_list {
+    font-size: 1rem;
+    padding: 16px 0;
+    text-align: center;
+    width: 100%;
+}
+.g_nav_list:hover {
+    background-color: #ffffff;
+}
+.g_nav_list_link {
+    color: #ffffff;
+}
+.g_nav_list_link:hover {
+    color: #808080;
 }
 /**************************************************
 footer
