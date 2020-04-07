@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kurocraft0312/ratpost_night/issues"
   },
-  "homepage": "https://github.com/kurocraft0312/ratpost_night#readme"
+  "homepage": "https://github.com/kurocraft0312/ratpost_night#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
