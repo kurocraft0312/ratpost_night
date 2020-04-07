@@ -51,6 +51,7 @@ header
 .contact-btn {
     border: 0;
     background-color: #172E3D;
+    border-radius: 8px;
     color: #ffffff;
 }
 .g_nav {
