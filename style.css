@@ -28,15 +28,44 @@ img {
 p {
     font-size: 16re,;
 }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
 /**************************************************
 header
 **************************************************/
-.title-nav {
+#title-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
-/* .g_nav {
+.cv-top {
     display: flex;
-    justify-content: space-between;
-} */
+}
+.tel-contact {
+    /* margin-left: auto; */
+    text-align: center;
+}
+.contact-btn {
+    border: 0;
+    background-color: #172E3D;
+    color: #ffffff;
+}
+.g_nav {
+    /* position: fixed; */
+    /* display: flex;
+    justify-content: space-between; */
+}
+/**************************************************
+footer
+**************************************************/
+.copyright {
+    background-color: #808080;
+    color: #ffffff;
+    padding: 16px 0;
+    text-align: center;
+}
+.official-link {
+    color: #ffffff;
+}
