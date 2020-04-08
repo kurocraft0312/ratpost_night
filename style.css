@@ -35,11 +35,20 @@ p {
 /**************************************************
 header
 **************************************************/
+.site-header {
+    background-color: #808080;
+}
 #title-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80%;
+}
+.site-title {
+    color: #ffffff;
+}
+.site-title-link {
+    color: #ffffff;/*aタグのリンク色*/
 }
 .cv-top {
     display: flex;
@@ -57,13 +66,14 @@ header
 .g_nav {
     display: flex;
     /* justify-content: space-around; */
-    background-color: #808080;
+    /* background-color: #808080; */
 }
 .g_nav_list {
     font-size: 1rem;
     padding: 16px 0;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
+    margin: 0 16px;
 }
 .g_nav_list:hover {
     background-color: #ffffff;
