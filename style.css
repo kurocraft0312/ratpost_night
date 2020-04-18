@@ -69,10 +69,12 @@ header
     color: #ffffff;
     display: block;
     padding: 16px 0;
+    transition: .6s;
 }
 .g_nav_list_link:hover {
     background-color: #ffffff;
     color: #212224;
+    opacity: 0.8;
 }
 /**************************************************
 footer
