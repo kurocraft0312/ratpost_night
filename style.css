@@ -26,7 +26,7 @@ img {
     width: 100%;
 }
 p {
-    font-size: 16re,;
+    font-size: .8rem;
 }
 .container {
     margin-left: auto;
@@ -36,7 +36,7 @@ p {
 header
 **************************************************/
 .site-header {
-    background-color: #808080;
+    background-color: #212224;
 }
 #title-header {
     display: flex;
@@ -46,53 +46,51 @@ header
 }
 .site-title {
     color: #ffffff;
+    padding: 0 8px;
 }
 .site-title-link {
-    color: #ffffff;/*aタグのリンク色*/
-}
-.cv-top {
-    display: flex;
-}
-.tel-contact {
-    /* margin-left: auto; */
-    text-align: center;
-}
-.contact-btn {
-    border: 0;
-    background-color: #172E3D;
-    border-radius: 8px;
     color: #ffffff;
 }
 .g_nav {
-    display: flex;
-    /* justify-content: space-around; */
-    /* background-color: #808080; */
+    padding: 0 8px;
+}
+.g_nav_lists {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
 }
 .g_nav_list {
     font-size: 1rem;
-    padding: 16px 0;
-    text-align: center;
-    /* width: 100%; */
-    margin: 0 16px;
-}
-.g_nav_list:hover {
-    background-color: #ffffff;
+    display: table-cell;
+    vertical-align: middle;
 }
 .g_nav_list_link {
     color: #ffffff;
+    display: block;
+    padding: 16px 0;
 }
 .g_nav_list_link:hover {
-    color: #808080;
+    background-color: #ffffff;
+    color: #212224;
 }
 /**************************************************
 footer
 **************************************************/
 .copyright {
-    background-color: #808080;
+    background-color: #212224;
     color: #ffffff;
     padding: 16px 0;
     text-align: center;
 }
 .official-link {
     color: #ffffff;
+}
+/**************************************************
+SP
+**************************************************/
+@media screen and (max-width:949px) {
+    .g_nav_list {
+        font-size: .6rem;
+    }
 }
