@@ -92,6 +92,25 @@ header
     height: 32vh;
 }
 /**************************************************
+main
+**************************************************/
+.section-title {
+    padding: 16px 0;
+    text-align: center;
+}
+.company-table {
+    font-size: .8rem;
+    margin: 0 auto;
+}
+.service-lists {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.service-list {
+    width: 33%;
+}
+/**************************************************
 footer
 **************************************************/
 .copyright {
