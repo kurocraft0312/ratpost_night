@@ -23,7 +23,7 @@ h6 {
     font-size: 1.2rem;
 }
 img {
-    width: 100%;
+    width: 100vw;
 }
 p {
     font-size: .8rem;
@@ -76,6 +76,21 @@ header
     color: #212224;
     opacity: 0.8;
 }
+.hero-header {
+    position: relative;
+    text-align: center;
+}
+.catchphrase {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    color: #ffffff;
+}
+.hero-header-img {
+    display: block;
+    height: 32vh;
+}
 /**************************************************
 footer
 **************************************************/
@@ -94,5 +109,10 @@ SP
 @media screen and (max-width:949px) {
     .g_nav_list {
         font-size: .6rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .catchphrase {
+        font-size: 1.4rem;
     }
 }
