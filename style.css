@@ -68,7 +68,7 @@ header
 .g_nav_list_link {
     color: #ffffff;
     display: block;
-    padding: 16px 0;
+    padding: 32px 0;
     transition: .6s;
 }
 .g_nav_list_link:hover {
