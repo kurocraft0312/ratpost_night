@@ -31,6 +31,7 @@ p {
 .container {
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
 }
 /**************************************************
 header
@@ -42,7 +43,6 @@ header
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
 }
 .site-title {
     color: #ffffff;
@@ -94,21 +94,36 @@ header
 /**************************************************
 main
 **************************************************/
+.contents-area {
+    text-align: center;
+}
 .section-title {
     padding: 16px 0;
-    text-align: center;
 }
 .company-table {
     font-size: .8rem;
     margin: 0 auto;
+    text-align: left;
 }
 .service-lists {
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 .service-list {
     width: 33%;
+}
+/* .box-icon {
+    border: 2px solid #212224;
+    border-radius: 50%;
+    height: 33%;
+    width: 33%;
+    margin: 0 auto;
+} */
+.box-icon-img {
+    border-radius: 50%;
+    height: 33%;
+    width: 33%;
+    margin: 0 auto;    
 }
 /**************************************************
 footer
@@ -125,7 +140,7 @@ footer
 /**************************************************
 SP
 **************************************************/
-@media screen and (max-width:949px) {
+@media screen and (max-width:969px) {
     .g_nav_list {
         font-size: .6rem;
     }
