@@ -161,6 +161,30 @@
             <!-- お問い合わせフォーム -->
             <section class="contents-area">
                 <h2 class="section-title">ご依頼・ご相談はコチラから</h2>
+                <form action="" method="post" action="/">
+                    <div class="form-parts">
+                        <label>ご連絡先のメールアドレス</label>
+                        <span class="required">必須</span>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="form-parts">
+                        <label>ご連絡先のお電話番号</label>
+                        <span class="required">必須</span>
+                        <input type="text" name="tel">
+                    </div>
+                    <div class="form-parts">
+                        <label>ご担当者様のお名前</label>
+                        <span class="required">必須</span>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="form-parts">
+                        <label>ご相談内容・ご質問・その他</label>
+                        <textarea name="contents" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="submit-btn">
+                        <input type="submit" class="submit-btn-color" value="送信">
+                    </div>
+                </form>
             </section>
         </div>
     </main>
