@@ -39,9 +39,9 @@
     <!-- Web Clip(Retina対応) -->
     <link rel="apple-touch-icon" href="">
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/reset.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Ratpost_night</title>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>/assets/css/reset.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <?php wp_head(); ?>
 </head>
 <body>
     <header class="site-header">
@@ -191,6 +191,7 @@
             <p>WordPress Ratpost_night Theme is provided by "<a class="official-link" href="https://www.rat-post-official.com/" target="_blank">Ratpost</a>".</p>
         </div>
     </footer>
+    <?php wp_footer(); ?>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script defer src="assets/js/index.js"></script>
 </body>
