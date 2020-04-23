@@ -10,10 +10,10 @@ add_theme_support('title-tag');
 /************************************************************************
 グロナビ
 *************************************************************************/
-wp_nav_menu( array(
-    'container' => 'nav',
-    'echo' => true,
-    'depth' => 0,
-    'theme_location' => 'ヘッダーナビ'
-));
+register_nav_menu('header-menu', 'ヘッダーメニュー');
+register_nav_menu('footer-menu', 'フッターメニュー');
+//https://developer.wordpress.org/reference/functions/wp_nav_menu/
+class edit_g_nav_list extends Walker_Nav_Menu {
+    // function 
+}
 ?>
