@@ -39,7 +39,7 @@
     <!-- Web Clip(Retina対応) -->
     <link rel="apple-touch-icon" href="">
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>/assets/css/reset.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>/../assets/css/reset.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head(); ?>
 </head>
