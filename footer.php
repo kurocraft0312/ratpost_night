@@ -7,3 +7,5 @@
 </footer>
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 <script defer src="assets/js/index.js"></script>
+</body>
+</html>
