@@ -55,12 +55,13 @@
                     'echo' => true,
                     'depth' => 0,
                     'walker' => new Edit_g_nav_list(),
-                    'theme_location' => 'ヘッダーナビ',
+                    'theme_location' => '',
+                    'items_wrap' => '<ul class="%2$s">%3$s</ul>'
                 ));
             ?>
             </nav>
             <!-- HTML -->
-            <nav class="g_nav">
+            <!-- <nav class="g_nav">
                 <ul class="g_nav_lists">
                     <li class="g_nav_list"><a href="#" class="g_nav_list_link">ホーム</a></li>
                     <li class="g_nav_list"><a href="#" class="g_nav_list_link">サービス一覧</a></li>
@@ -68,7 +69,7 @@
                     <li class="g_nav_list"><a href="#" class="g_nav_list_link">会社概要</a></li>
                     <li class="g_nav_list"><a href="#" class="g_nav_list_link">お問い合わせ</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </header>
     <main>

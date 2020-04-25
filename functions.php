@@ -19,7 +19,7 @@ register_nav_menu('footer-menu', 'フッターメニュー');
 class Edit_g_nav_list extends Walker_Nav_Menu {
     function start_el(&$nav_ul_lists_start, $item, $depth = 0, $args = null, $id = 0) {
         // var_dump($item);
-        $nav_ul_lists_start .= '<li class="g_nav_list">' . '<a href="'. $item->guid .'" class="g_nav_list_link">'.$item->post_title;
+        $nav_ul_lists_start .= '<li class="g_nav_list">' . '<a href="'. $item->url .'" class="g_nav_list_link">'.$item->title;
     }
     function end_el(&$nav_ul_lists_end, $item, $depth = 0, $args = null) {
         $nav_ul_lists_end .= '</a></li>';
