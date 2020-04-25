@@ -33,9 +33,10 @@ h5 {
 h6 {
     font-size: 1.2rem;
 }
-img {
+/* 拡張機能にも影響が出るので、一旦コメントアウト */
+/* img {
     width: 100vw;
-}
+} */
 p {
     font-size: .8rem;
 }

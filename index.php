@@ -60,16 +60,6 @@
                 ));
             ?>
             </nav>
-            <!-- HTML -->
-            <!-- <nav class="g_nav">
-                <ul class="g_nav_lists">
-                    <li class="g_nav_list"><a href="#" class="g_nav_list_link">ホーム</a></li>
-                    <li class="g_nav_list"><a href="#" class="g_nav_list_link">サービス一覧</a></li>
-                    <li class="g_nav_list"><a href="#" class="g_nav_list_link">ニュース</a></li>
-                    <li class="g_nav_list"><a href="#" class="g_nav_list_link">会社概要</a></li>
-                    <li class="g_nav_list"><a href="#" class="g_nav_list_link">お問い合わせ</a></li>
-                </ul>
-            </nav> -->
         </div>
     </header>
     <main>
@@ -201,7 +191,7 @@
     </main>
     <footer>
         <div class="copyright">
-            <small lang="en">&copy; 2020 Ratpost by Kurokawa Shun</small>
+            <small lang="en">&copy; <?php echo date("Y"); ?> Ratpost by Kurokawa Shun</small>
             <p>WordPress Ratpost_night Theme is provided by "<a class="official-link" href="https://www.rat-post-official.com/" target="_blank">Ratpost</a>".</p>
         </div>
     </footer>
