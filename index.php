@@ -47,16 +47,18 @@
     <header class="site-header">
         <div id="title-header" class="container">
             <h1 class="site-title"><a href="/" class="site-title-link">Ratpost_night</a></h1>
+            <nav class="g_nav">
             <?php
                 wp_nav_menu( array(
-                    'container' => 'nav',
-                    'menu_class' => 'g_nav',
+                    'container' => 'ul',
+                    'menu_class' => 'g_nav_lists',
                     'echo' => true,
                     'depth' => 0,
-                    'walker' => 'new Edit_g_nav_list',
+                    'walker' => new Edit_g_nav_list(),
                     'theme_location' => 'ヘッダーナビ',
                 ));
             ?>
+            </nav>
             <!-- HTML -->
             <nav class="g_nav">
                 <ul class="g_nav_lists">
