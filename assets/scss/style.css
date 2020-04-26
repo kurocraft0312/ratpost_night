@@ -1,5 +1,15 @@
-@charset "utf-8";
-
+/****
+Theme Name: Ratpost Night
+Text Domain: ratpostnight
+Theme URL: https://www.rat-post-official.com/
+Description: Night WordPress theme.
+Author: kurocraft0312
+Author URI: https://www.rat-post-official.com/
+Version: 0.0.1
+Tags: Blog,Grid Layout,Two Columns
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+****/
 html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, code, em, img, strong, i, form, label, table, thead, tbody, tfoot, tr, th, td, article, aside, figure, figcaption, footer, header, menu, nav, section, video {
   margin: 0;
   padding: 0;
@@ -8,16 +18,20 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, code,
   font-style: inherit;
   vertical-align: baseline;
 }
+
 article, aside, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
-ol,ul {
+
+ol, ul {
   list-style: none;
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }
