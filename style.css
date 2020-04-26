@@ -11,6 +11,9 @@ Tags: Blog,Grid Layout,Two Columns
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ****/
+@import url("assets/css/header.scss");
+@import url("assets/css/footer.scss");
+/*共通*/
 body {
     font-size: 62.5%;
     word-wrap: break-word;
