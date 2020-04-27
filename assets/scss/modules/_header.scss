@@ -56,3 +56,16 @@ header
     display: block;
     height: 32vh;
 }
+/**************************************************
+SP
+**************************************************/
+@media screen and (max-width:969px) {
+    .g_nav_list {
+        font-size: .6rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .catchphrase {
+        font-size: 1.4rem;
+    }
+}
