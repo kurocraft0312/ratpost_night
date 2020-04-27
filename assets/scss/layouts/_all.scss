@@ -1,0 +1,35 @@
+/*共通*/
+body {
+    font-size: 62.5%;
+    word-wrap: break-word;
+}
+h1 {
+    font-size: 2.2rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.6rem;
+}
+h5 {
+    font-size: 1.4rem;
+}
+h6 {
+    font-size: 1.2rem;
+}
+/* 拡張機能にも影響が出るので、一旦コメントアウト */
+/* img {
+    width: 100vw;
+} */
+p {
+    font-size: .8rem;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}

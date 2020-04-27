@@ -1,0 +1,82 @@
+/**************************************************
+main
+**************************************************/
+.contents-area {
+    text-align: center;
+}
+.section-title {
+    padding: 16px 0;
+}
+.news-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date {
+    font-size: .8rem;
+    margin: 0 8px;
+}
+.category-label {
+    background-color: #212224;
+    /* color: #ffffff; */
+    margin: 0 8px;
+    padding: 2px 8px;
+}
+.category-label-link {
+    color: #ffffff;
+}
+.new-text {
+    margin: 0 8px;
+}
+.company-table {
+    font-size: .8rem;
+    margin: 0 auto;
+    text-align: left;
+}
+.service-lists {
+    display: flex;
+    justify-content: center;
+}
+.service-list {
+    width: 33%;
+}
+/* .box-icon {
+    border: 2px solid #212224;
+    border-radius: 50%;
+    height: 33%;
+    width: 33%;
+    margin: 0 auto;
+} */
+.box-icon-img {
+    border-radius: 50%;
+    height: 33%;
+    width: 33%;
+    margin: 0 auto;    
+}
+.form-parts {
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+}
+.required {
+    background-color: #eb4034;
+    color: #ffffff;
+    padding: 2px 8px;
+}
+.submit-btn {
+    display: block;
+    margin: 16px auto;
+    transition: .6s;
+}
+.submit-btn:hover {
+    opacity: 0.8;
+}
+.submit-btn-color {
+    border: 0;
+    background-color: #212224;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 8px;
+    padding: 8px 48px;
+}

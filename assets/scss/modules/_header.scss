@@ -1,0 +1,58 @@
+/**************************************************
+header
+**************************************************/
+.site-header {
+    background-color: #212224;
+}
+#title-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-title {
+    color: #ffffff;
+    padding: 0 8px;
+}
+.site-title-link {
+    color: #ffffff;
+}
+.g_nav {
+    padding: 0 8px;
+}
+.g_nav_lists {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+}
+.g_nav_list {
+    font-size: 1rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+.g_nav_list_link {
+    color: #ffffff;
+    display: block;
+    padding: 32px 0;
+    transition: .6s;
+}
+.g_nav_list_link:hover {
+    background-color: #ffffff;
+    color: #212224;
+    opacity: 0.8;
+}
+.hero-header {
+    position: relative;
+    text-align: center;
+}
+.catchphrase {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    color: #ffffff;
+}
+.hero-header-img {
+    display: block;
+    height: 32vh;
+}
