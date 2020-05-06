@@ -1,7 +1,25 @@
 const { src,dest,watch,parallel } = require('gulp');
+const DartSass = require('sass');
+const Fiber = require('fibers');
 const gulpPug = require('gulp-pug');
-const gulpSass = require('gulp-sass'); 
+const gulpSass = require('gulp-sass');
 const gulpImage = require('gulp-image');
+
+// https://github.com/sass/dart-sass/blob/master/README.md#javascript-api
+// https://sass-lang.com/documentation/js-api
+// https://nju33.com/sass/@forward
+// https://sass-lang.com/documentation/at-rules/use
+// https://blog.rhyztech.net/sass_use_and_forward/
+DartSass.render({
+    file: '',
+    importer: function(url,prev,done) {
+        //
+    },
+    fiber: Fiber
+    }, function(err, result) {
+        //
+});
+
 
 function compressPug() {
     return src("")
