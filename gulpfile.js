@@ -3,6 +3,10 @@ const gulpPug = require('gulp-pug');
 const gulpSass = require('gulp-sass'); 
 const gulpImage = require('gulp-image');
 
+function compressPug() {
+    return src("")
+}
+
 function compressSass() {
     // コンパイルしたいファイル群
     return src("assets/scss/style.scss")
@@ -23,8 +27,8 @@ function compressImage() {
     .pipe(dest(""));
 }
 
-// 常に監視（タスク自動化）
+// 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
 function WatchOptimizeFiles() {
-    return watch
+    return watch()
 }
 exports.default = WatchOptimizeFiles;
