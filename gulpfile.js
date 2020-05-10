@@ -27,6 +27,11 @@ gulp-image
 gulp-rename
 browser-sync
 **/
+/**
+設定内容
+src：ファイルの吐き出し前
+dest:ファイルの吐き出し先
+**/
 const { src,dest,watch,series,parallel } = require('gulp');
 const DartSass = require('sass');
 const Fiber = require('fibers');
