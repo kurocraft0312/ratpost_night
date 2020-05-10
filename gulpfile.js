@@ -22,8 +22,11 @@ function 関数名() {
 sass
 fibers
 gulp-sass
+gulp-clean-css
 gulp-image
-gulp-rename
+gulp-rename(保留)
+gulp-plumber(除去)
+gulp-notify(除去)
 browser-sync
 **/
 /**
@@ -35,8 +38,8 @@ const { src,dest,watch,series,parallel } = require('gulp');
 const DartSass = require('sass');
 const Fiber = require('fibers');
 const gulpSass = require('gulp-sass');
+const gulpCleanCss = require('gulp-clean-css');
 const gulpImage = require('gulp-image');
-const gulpRename = require('gulp-rename');
 const browserSync = require('browser-sync');
 
 // https://qiita.com/yuucu/items/a56d3d0f1313a9897f7e
@@ -57,42 +60,40 @@ DartSass.render({
     },
     fiber: Fiber,
     outputStyle: compressed // コメント・インデント・改行を削除＆圧縮して読み込む（EasySassの引数の内容を参考）
-    // }, function(err, result) {
-    //     return 
 });
-
-/*****************
-compressSass・compressImageという関数名は、watchメソッドで呼び出しやすくするために使う
-*****************/
 /*****
 Sass
 *****/
 function compressSass() {
     // コンパイルしたいファイル群
     return src("src/scss/style.scss")
-    // pipe()は関数合成
-    .pipe(
-        // コンパイル後のCSSを最適化
-        gulpSass({
-            outputStyle: "compressed"
-        })
-    )
+    // pipe()は関数合成＆コンパイル後のCSSを最適化
+    .pipe(gulpSass({outputStyle: "compressed"}))
     // コンパイル後は、ディレクトリ外にCSSを吐き出し＆保存
     .pipe(dest("/"));
 }
-// Image
+/*****
+Cssmin(https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api)
+*****/
+function compressCss() {
+    return src('dest/*.css')
+    .pipe(gulpCleanCss())
+    .pipe(dest('dest/'));
+}
+/*****
+Image
+*****/
 function compressImage() {
     return src("src/img/*")
-    .pipe(
-        image()
-    )
-    .pipe(dest(""));
+    .pipe(gulpImage())
+    .pipe(dest("dest/img/*"));
 }
-// Rename
-function rename()
-
-// browserSync
-function autobuild()
+/*****
+browserSync
+*****/
+function autobuild() {
+    return browserSync({server: {}});
+}
 
 // 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
 function WatchOptimizeFiles() {
