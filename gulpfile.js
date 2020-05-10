@@ -21,7 +21,6 @@ function 関数名() {
 使っているプラグイン
 sass
 fibers
-gulp-pug
 gulp-sass
 gulp-image
 gulp-rename
@@ -35,7 +34,6 @@ dest:ファイルの吐き出し先
 const { src,dest,watch,series,parallel } = require('gulp');
 const DartSass = require('sass');
 const Fiber = require('fibers');
-const gulpPug = require('gulp-pug');
 const gulpSass = require('gulp-sass');
 const gulpImage = require('gulp-image');
 const gulpRename = require('gulp-rename');
@@ -64,29 +62,8 @@ DartSass.render({
 });
 
 /*****************
-compressPug・compressSass・compressImageという関数名は、watchメソッドで呼び出しやすくするために使う
+compressSass・compressImageという関数名は、watchメソッドで呼び出しやすくするために使う
 *****************/
-
-// https://qiita.com/s-katsumasa/items/0453736c5ab4d43cf265
-// Pugは、出力先を分ける必要がありそうなので、テンプレートパーツは、パーツごとに処理を書き分ける
-
-/*****
-Pug(ファイルの拡張子を.html→.phpへ変換)【パーツ化されていないもの】
-*****/
-function compressPug() {
-    //.pugのファイルをすべてスラッシュ配下に出力する
-    return src("src/pug/*.pug")
-    .pipe(gulpPug())
-    .pipe(gulpRename({
-        extname: ".php"
-        }))
-    .pipe(dest("/"));
-    // .pipe(
-    //     gulpPug({
-    //         html: "/"
-    //     })
-    // )
-}
 /*****
 Sass
 *****/
