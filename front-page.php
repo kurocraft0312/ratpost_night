@@ -3,7 +3,7 @@
     <!-- ヒーローヘッダー -->
     <section class="hero-header">
         <h2 class="catchphrase">ここにキャッチコピーを入れる</h2>
-        <img src="assets/img/top-img.jpg" class="hero-header-img" alt="Ratpost_night">
+        <img src="dest/img/top-img.jpg" class="hero-header-img" alt="Ratpost_night">
     </section>
     <div class="container">
         <!-- メッセージ文 -->
@@ -19,7 +19,7 @@
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
-                        <img src="assets/img/top-img-test.jpg" class="box-icon-img" alt="">
+                        <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
                     <h3>1.記事作成</h3>
                     <p>分野の素人が読んでも理解できる文章を作成します。</p>
@@ -27,7 +27,7 @@
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
-                        <img src="assets/img/top-img-test.jpg" class="box-icon-img" alt="">
+                        <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
                     <h3>2.記事添削</h3>
                     <p>誰でも読める文章になるよう文章を添削します。</p>
@@ -35,7 +35,7 @@
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
-                        <img src="assets/img/top-img-test.jpg" class="box-icon-img" alt="">
+                        <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
                     <h3>3.記事更新</h3>
                     <p>世界中の方に読んでもらえるようネット上に文章を公開します。</p>

@@ -35,7 +35,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="Retina版のiPad、iPad mini用、iOS 7以降">
     <link rel="apple-touch-icon" sizes="180x180" href="iPhone 6 plus">
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>/../assets/css/reset.min.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>/../dest/css/reset.min.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <?php wp_head(); ?>
 </head>

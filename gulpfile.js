@@ -1,4 +1,33 @@
-const { src,dest,watch,parallel } = require('gulp');
+/****Gulp使い方
+// https://www.youtube.com/watch?v=TRnpXvg3NtA&list=PLC_Jqbgu7I6ag6Xie7_J2HZYtPpIZBvCW&index=11
+①使うプラグインを宣言
+const 定数名 = require('プラグイン名');
+
+②処理をまとめる
+function 関数名() {
+    return src('コンパイルしたいファイル・ファイル群');
+    .pipe()：関数要素を結合する
+    .dest():コンパイルしたファイルの吐き出し先
+}
+
+③定義したいファイルにオプションを設定する(吐き出す際に可能な限り、一行で済むようにする処理)
+    .watch():自動化処理を監視する
+    .series():直列で処理したい内容
+    .parallel():並列で処理したい内容
+
+④exports.オプション名 = オプション名;でタスクの自動化内容を実行する
+****/
+/**
+使っているプラグイン
+sass
+fibers
+gulp-pug
+gulp-sass
+gulp-image
+gulp-rename
+browser-sync
+**/
+const { src,dest,watch,series,parallel } = require('gulp');
 const DartSass = require('sass');
 const Fiber = require('fibers');
 const gulpPug = require('gulp-pug');
@@ -18,7 +47,7 @@ const browserSync = require('browser-sync');
 // Dart-sass:https://github.com/sass/dart-sass/blob/master/README.md#javascript-api
 // Dart-sassの引数について（引数はnode-sassと同一）：https://github.com/sass/node-sass
 DartSass.render({
-    file: 'assets/scss/style.scss',//コンパイルするファイルの指定
+    file: 'src/scss/style.scss',//コンパイルするファイルの指定
     importer: function(url,prev,done) {
         //
         return url('style.css');
@@ -35,20 +64,30 @@ compressPug・compressSass・compressImageという関数名は、watchメソッ
 
 // https://qiita.com/s-katsumasa/items/0453736c5ab4d43cf265
 // Pugは、出力先を分ける必要がありそうなので、テンプレートパーツは、パーツごとに処理を書き分ける
-// Pug
+
+/*****
+Pug(ファイルの拡張子を.html→.phpへ変換)【パーツ化されていないもの】
+*****/
 function compressPug() {
     //.pugのファイルをすべてスラッシュ配下に出力する
-    return src("assets/pug/*.pug")
-    .pipe(
-        gulpPug({
-            html: "/"
-        })
-    )
+    return src("src/pug/*.pug")
+    .pipe(gulpPug())
+    .pipe(gulpRename({
+        extname: ".php"
+        }))
+    .pipe(dest("/"));
+    // .pipe(
+    //     gulpPug({
+    //         html: "/"
+    //     })
+    // )
 }
-// Sass
+/*****
+Sass
+*****/
 function compressSass() {
     // コンパイルしたいファイル群
-    return src("assets/scss/style.scss")
+    return src("src/scss/style.scss")
     // pipe()は関数合成
     .pipe(
         // コンパイル後のCSSを最適化
@@ -61,7 +100,7 @@ function compressSass() {
 }
 // Image
 function compressImage() {
-    return src("assets/img/*")
+    return src("src/img/*")
     .pipe(
         image()
     )
