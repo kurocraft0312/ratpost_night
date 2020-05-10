@@ -1,5 +1,7 @@
-/****Gulp使い方
+/****
+Gulp使い方
 // https://www.youtube.com/watch?v=TRnpXvg3NtA&list=PLC_Jqbgu7I6ag6Xie7_J2HZYtPpIZBvCW&index=11
+
 ①使うプラグインを宣言
 const 定数名 = require('プラグイン名');
 
@@ -41,6 +43,7 @@ const gulpSass = require('gulp-sass');
 const gulpCleanCss = require('gulp-clean-css');
 const gulpImage = require('gulp-image');
 const browserSync = require('browser-sync');
+const server = browserSync.create();
 
 // https://qiita.com/yuucu/items/a56d3d0f1313a9897f7e
 
@@ -76,9 +79,9 @@ function compressSass() {
 Cssmin(https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api)
 *****/
 function compressCss() {
-    return src('dest/*.css')
+    return src('dest/css/*.css')
     .pipe(gulpCleanCss())
-    .pipe(dest('dest/'));
+    .pipe(dest('dest/css/*.css'));
 }
 /*****
 Image
@@ -92,7 +95,7 @@ function compressImage() {
 browserSync
 *****/
 function autobuild() {
-    return browserSync({server: {}});
+    server.init({server: {baseDir: '/dest'}});
 }
 
 // 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
