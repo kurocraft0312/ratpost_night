@@ -7,9 +7,9 @@ const 定数名 = require('プラグイン名');
 
 ②処理をまとめる
 function 関数名() {
-    return src('コンパイルしたいファイル・ファイル群');
-    .pipe()：関数要素を結合する
-    .dest():コンパイルしたファイルの吐き出し先
+    return src('コンパイルしたいファイル・ファイル群');2-1 src()で変化を加えるファイルを指定
+    .pipe()：関数要素を結合する　2-2 ファイルを結合して同時に変化を加えたいものをつなぐ
+    .dest():コンパイルしたファイルの吐き出し先　2-3　dest()でsrc()から変更したファイルの吐き出し先を指定する
 }
 
 ③定義したいファイルにオプションを設定する(吐き出す際に可能な限り、一行で済むようにする処理)
@@ -42,8 +42,7 @@ const Fiber = require('fibers');
 const gulpSass = require('gulp-sass');
 const gulpCleanCss = require('gulp-clean-css');
 const gulpImage = require('gulp-image');
-const browserSync = require('browser-sync');
-const server = browserSync.create();
+const browserSync = require('browser-sync').create();
 
 // https://qiita.com/yuucu/items/a56d3d0f1313a9897f7e
 
@@ -70,7 +69,7 @@ Sass
 function compressSass() {
     // コンパイルしたいファイル群
     return src("src/scss/style.scss")
-    // pipe()は関数合成＆コンパイル後のCSSを最適化
+    // pipe()は関数合成＆コンパイル後のCSSを最適化(ここでsrcで読み込んだファイルにやりたいことを記載する)
     .pipe(gulpSass({outputStyle: "compressed"}))
     // コンパイル後は、ディレクトリ外にCSSを吐き出し＆保存
     .pipe(dest("/"));
@@ -95,12 +94,16 @@ function compressImage() {
 browserSync
 *****/
 function autobuild() {
-    server.init({server: {baseDir: '/dest'}});
+    // https://qiita.com/manpuku/items/ee530c4963d50b6f341f
+    browserSync.init({browserSync: {baseDir: '/dest'}});
 }
 
+browserSync.reload();
+
 // 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
+// https://gulpjs.com/docs/en/api/parallel
 function WatchOptimizeFiles() {
-    return watch()
+    return watch(series(parallel(compressSass,compressImage),compressCss,autobuild));
 }
 // タスク群出力
 exports.default = WatchOptimizeFiles;
