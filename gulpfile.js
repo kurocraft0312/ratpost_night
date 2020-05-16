@@ -24,7 +24,7 @@ function 関数名() {
 sass
 fibers
 gulp-sass
-gulp-clean-css
+gulp-clean-css(除去)
 gulp-image
 gulp-rename(保留)
 gulp-plumber(除去)
@@ -40,7 +40,6 @@ const { src,dest,watch,series,parallel } = require('gulp');
 const DartSass = require('sass');
 const Fiber = require('fibers');
 const gulpSass = require('gulp-sass');
-const gulpCleanCss = require('gulp-clean-css');
 const gulpImage = require('gulp-image');
 const browserSync = require('browser-sync').create();
 
@@ -78,14 +77,6 @@ function compressSass() {
 // 成功
 // exports.compressSass = compressSass;
 /*****
-Cssmin(https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api)
-*****/
-function compressCss() {
-    return src('dest/css/*.css')
-    .pipe(gulpCleanCss())
-    .pipe(dest('dest/css/*.css'));
-}
-/*****
 Image
 *****/
 function compressImage() {
@@ -93,6 +84,7 @@ function compressImage() {
     .pipe(gulpImage())
     .pipe(dest("dest/img/*"));
 }
+// exports.compressImage = compressImage;
 /*****
 browserSync
 *****/
@@ -106,7 +98,7 @@ browserSync.reload();
 // 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
 // https://gulpjs.com/docs/en/api/parallel
 function WatchOptimizeFiles() {
-    return watch(series(parallel(compressSass,compressImage),compressCss,autobuild));
+    return watch(series(parallel(compressSass,compressImage),autobuild));
 }
 // タスク群出力
 // exports.default = WatchOptimizeFiles;
