@@ -73,8 +73,10 @@ function compressSass() {
     // pipe()は関数合成＆コンパイル後のCSSを最適化(ここでsrcで読み込んだファイルにやりたいことを記載する)
     .pipe(gulpSass({outputStyle: "compressed"}))
     // コンパイル後は、ディレクトリ外にCSSを吐き出し＆保存
-    .pipe(dest("/"));
+    .pipe(dest("dest/css/"));
 }
+// 成功
+// exports.compressSass = compressSass;
 /*****
 Cssmin(https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-api)
 *****/
@@ -107,4 +109,4 @@ function WatchOptimizeFiles() {
     return watch(series(parallel(compressSass,compressImage),compressCss,autobuild));
 }
 // タスク群出力
-exports.default = WatchOptimizeFiles;
+// exports.default = WatchOptimizeFiles;

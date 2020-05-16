@@ -1,0 +1,13 @@
+/****
+Theme Name: Ratpost Night
+Text Domain: ratpostnight
+Theme URL: https://www.rat-post-official.com/
+Description: Night WordPress theme.
+Author: kurocraft0312
+Author URI: https://www.rat-post-official.com/
+Version: 0.0.1
+Tags: Blog,Grid Layout,Two Columns
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+****/
+@import "dest/css/style.css";
