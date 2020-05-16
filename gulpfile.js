@@ -82,8 +82,9 @@ Image
 function compressImage() {
     return src("src/img/*")
     .pipe(gulpImage())
-    .pipe(dest("dest/img/*"));
+    .pipe(dest("dest/img/"));
 }
+//成功
 // exports.compressImage = compressImage;
 /*****
 browserSync
