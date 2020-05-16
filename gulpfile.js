@@ -89,17 +89,22 @@ function compressImage() {
 /*****
 browserSync
 *****/
-function autobuild() {
+function autoBuild() {
     // https://qiita.com/manpuku/items/ee530c4963d50b6f341f
-    browserSync.init({browserSync: {baseDir: '/dest'}});
+    browserSync.init({
+        files: ['*.php'],
+        proxy: 'http://wpthemedev.local/'
+        // server: {baseDir: ''}
+    });
 }
 
 browserSync.reload();
-
+// 成功
+// exports.autobuild = autobuild;
 // 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
 // https://gulpjs.com/docs/en/api/parallel
 function WatchOptimizeFiles() {
-    return watch(series(parallel(compressSass,compressImage),autobuild));
+    return watch(series(parallel(compressSass,compressImage),autoBuild));
 }
 // タスク群出力
-// exports.default = WatchOptimizeFiles;
+exports.WatchOptimizeFiles = WatchOptimizeFiles;
