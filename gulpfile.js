@@ -54,14 +54,15 @@ const browserSync = require('browser-sync').create();
 
 // Dart-sass:https://github.com/sass/dart-sass/blob/master/README.md#javascript-api
 // Dart-sassの引数について（引数はnode-sassと同一）：https://github.com/sass/node-sass
-DartSass.render({
+// https://github.com/sass/dart-sass/issues/23 render()だとNoSuchMethodError: method not found: 'call'になるので、renderSync()で読み込み速度を改善してエラーに対処
+DartSass.renderSync({
     file: 'src/scss/style.scss',//コンパイルするファイルの指定
     importer: function(url,prev,done) {
         //
         return url('style.css');
     },
     fiber: Fiber,
-    outputStyle: compressed // コメント・インデント・改行を削除＆圧縮して読み込む（EasySassの引数の内容を参考）
+    // outputStyle: "compressed" // コメント・インデント・改行を削除＆圧縮して読み込む（EasySassの引数の内容を参考）
 });
 /*****
 Sass
