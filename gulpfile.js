@@ -55,10 +55,10 @@ const browserSync = require('browser-sync').create();
 // Dart-sassの引数について（引数はnode-sassと同一）：https://github.com/sass/node-sass
 // https://github.com/sass/dart-sass/issues/23 render()だとNoSuchMethodError: method not found: 'call'になるので、renderSync()で読み込み速度を改善してエラーに対処
 DartSass.renderSync({
-    file: 'src/scss/style.scss',//コンパイルするファイルの指定
+    file: "src/scss/style.scss",//コンパイルするファイルの指定
     importer: function(url,prev,done) {
         //
-        return url('style.css');
+        return url("style.css");
     },
     fiber: Fiber,
     // outputStyle: "compressed" // コメント・インデント・改行を削除＆圧縮して読み込む（EasySassの引数の内容を参考）
@@ -82,23 +82,29 @@ Image
 function compressImage() {
     return src("src/img/*")
     .pipe(gulpImage())
-    .pipe(dest("dest/img/*"));
+    .pipe(dest("dest/img/"));
 }
+//成功
 // exports.compressImage = compressImage;
 /*****
 browserSync
 *****/
-function autobuild() {
+function autoBuild() {
     // https://qiita.com/manpuku/items/ee530c4963d50b6f341f
-    browserSync.init({browserSync: {baseDir: '/dest'}});
+    browserSync.init({
+        //https://www.webprofessional.jp/wordpress-theme-automation-with-gulp/
+        files: ["*.php"],//対象とするファイル
+        proxy: "http://wpthemedev.local/"//開発環境のURLを指定
+    });
 }
 
 browserSync.reload();
-
+// 成功
+// exports.autoBuild = autoBuild;
 // 常に監視（タスク自動化・同時に起動したいコマンドまとめ）
 // https://gulpjs.com/docs/en/api/parallel
 function WatchOptimizeFiles() {
-    return watch(series(parallel(compressSass,compressImage),autobuild));
+    return watch(["src/scss/*.scss" , "*.jpg" , "*.png"],series(parallel(compressSass,compressImage),autoBuild));
 }
 // タスク群出力
-// exports.default = WatchOptimizeFiles;
+exports.WatchOptimizeFiles = WatchOptimizeFiles;
