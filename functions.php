@@ -1,5 +1,6 @@
 <?php
 require_once('lib/admin/ogp.php');
+require_once('lib/admin/customizer.php');
 require_once('lib/functions/remove_action.php');
 require_once('lib/functions/add_action.php');
 require_once('lib/parts/g_nav.php');
