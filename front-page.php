@@ -46,41 +46,20 @@
         <section class="contents-area">
             <h2 class="section-title">ニュース一覧</h2>
             <ul>
-                <!-- ここが投稿の内容 -->
                 <?php
                     if(have_posts()) {
                         while(have_posts()) {
-                            the_post();
-                        }
-                ?>
-                <?php 
+                            the_post();     
                     $categories = get_the_category();
-                    // echo '<li class="news-list">';
-
                     foreach($categories as $category) {
-                        // var_dump($category);
                         echo '<li class="news-list"><span class="date">' . get_the_date('Y年m月d日') . '</span>' .
                         '<div class="category-label"><a href="' . esc_url(get_category_link($category->term_id)) . '" class="category-label-link">' . $category->cat_name . '</a></div>' .
-                        '<p class="new-text"><a href="' . esc_url(get_permalink()) . '">' . the_title() . '</a></p></li>';
+                        '<p class="new-text"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></p></li>';
+                            }
+                        }
+                    } else {
+                        echo "最新のニュースはありません。";
                     }
-                    // echo '</li>';
-                ?>
-
-                <!-- ここらへんをPHP化する -->
-                <!-- <li class="news-list">
-                    <span class="date"><?php echo get_the_date(); ?></span> -->
-                    <!--  the_title('<h2 class="category-label"><a href="'. esc_url(get_permalink()) .'" class="category-label-link">','</a></h2>'); ?> -->
-                    <!-- <h2 class="category-label"><a href="<?php esc_url(get_category_link()); ?>" class="category-label-link"><?php get_the_category(); ?></a></h2>
-                    <p class="new-text"><a href="<?php esc_url(get_permalink()); ?>"><?php the_title(); ?></a></p>
-                </li> -->
-                <!-- <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li> -->
-                <?php
-                   } else {
-                       echo "最新のニュースはありません。";
-                   } 
                 ?>
             </ul>
         </section>
