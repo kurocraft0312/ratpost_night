@@ -11,6 +11,7 @@ function theme_customize_register($wp_customize) {
     // テーマ設定（メニュー名の中の項目を設定）
     $wp_customize->add_setting('ratpost_theme_settings' , array(
         'default' => '',
+        // 'type' => 'option',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field'
     ));
