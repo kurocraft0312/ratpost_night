@@ -2,7 +2,7 @@
 <main>
     <!-- ヒーローヘッダー -->
     <section class="hero-header">
-        <h2 class="catchphrase">ここにキャッチコピーを入れる</h2>
+        <h2 class="catchphrase"><?php echo get_option('ratpost_theme_settings'); ?></h2>
         <img src="dest/img/top-img.jpg" class="hero-header-img" alt="Ratpost_night">
     </section>
     <div class="container">
