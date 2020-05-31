@@ -2,15 +2,14 @@
 <main>
     <!-- ヒーローヘッダー -->
     <section class="hero-header">
-        <h2 class="catchphrase"><?php echo get_option('ratpost_theme_settings'); ?></h2>
+        <h2 class="catchphrase"><?php echo get_option('ratpost_theme_catchphrase_settings'); ?></h2>
         <img src="dest/img/top-img.jpg" class="hero-header-img" alt="Ratpost_night">
     </section>
     <div class="container">
         <!-- メッセージ文 -->
         <section class="contents-area">
-            <h2 class="section-title">WEBのプロフェッショナル集団が、あなたの店舗の売上を最大化します</h2>
-            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+            <h2 class="section-title"><?php echo get_option('ratpost_theme_bodycopy_settings'); ?></h2>
+            <p><?php echo get_option('ratpost_theme_bodycopy_phrase_settings'); ?></p>
         </section>
         <!-- サービス一覧 -->
         <section class="contents-area">
