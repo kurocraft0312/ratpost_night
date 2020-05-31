@@ -46,11 +46,21 @@
         <section class="contents-area">
             <h2 class="section-title">ニュース一覧</h2>
             <ul>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
-                <li class="news-list"><span class="date">2020年04月19日</span><div class="category-label"><a href="#" class="category-label-link">お知らせ</a></div><p class="new-text"><a href="#">テストテスト</a></p></li>
+                <?php
+                    if(have_posts()) {
+                        while(have_posts()) {
+                            the_post();     
+                    $categories = get_the_category();
+                    foreach($categories as $category) {
+                        echo '<li class="news-list"><span class="date">' . get_the_date('Y年m月d日') . '</span>' .
+                        '<div class="category-label"><a href="' . esc_url(get_category_link($category->term_id)) . '" class="category-label-link">' . $category->cat_name . '</a></div>' .
+                        '<p class="new-text"><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></p></li>';
+                            }
+                        }
+                    } else {
+                        echo "最新のニュースはありません。";
+                    }
+                ?>
             </ul>
         </section>
         <!-- 会社概要 -->
