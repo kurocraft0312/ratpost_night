@@ -1,0 +1,7 @@
+#
+# Gitのローカルリポジトリの設定をまとめたファイルです。 -影響範囲：ユーザー
+#
+
+[alias]
+    merged-branch = !sh -c 'git branch -vv | grep \"origin/ .*: gone]\" | awk \"{print \\$1}\"'
+    delete-merged-branch = !sh -c 'git merged-branch | xargs git branch -d'
