@@ -20,24 +20,24 @@
                         <!-- ここにアイコンを刺す仕組みを作る -->
                         <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
-                    <h3>1.記事作成</h3>
-                    <p>分野の素人が読んでも理解できる文章を作成します。</p>
+                    <h3><?php echo get_option('ratpost_theme_servicelist_first_title_settings'); ?></h3>
+                    <p><?php echo get_option('ratpost_theme_servicelist_first_settings'); ?></p>
                 </div>
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
                         <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
-                    <h3>2.記事添削</h3>
-                    <p>誰でも読める文章になるよう文章を添削します。</p>
+                    <h3><?php echo get_option('ratpost_theme_servicelist_second_title_settings'); ?></h3>
+                    <p><?php echo get_option('ratpost_theme_servicelist_second_settings'); ?></p>
                 </div>
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
                         <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
-                    <h3>3.記事更新</h3>
-                    <p>世界中の方に読んでもらえるようネット上に文章を公開します。</p>
+                    <h3><?php echo get_option('ratpost_theme_servicelist_third_title_settings'); ?></h3>
+                    <p><?php echo get_option('ratpost_theme_servicelist_third_settings'); ?></p>
                 </div>
             </div>
         </section>
