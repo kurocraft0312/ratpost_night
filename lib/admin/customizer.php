@@ -448,6 +448,26 @@ function theme_customize_register_companyprofile($wp_customize) {
             'placeholder' => '例）川口駅東口より徒歩8分'
         )
     ));
+
+    // テーマ設定（メニュー名の中の項目を設定）
+    $wp_customize->add_setting('ratpost_theme_maps_settings' , array(
+        'default' => '',
+        'type' => 'option',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+
+    // コントロール設定
+    $wp_customize->add_control('ratpost_theme_maps_controls' , array(
+        'settings' => 'ratpost_theme_maps_settings',
+        'label' => 'Googleマップを設置',
+        'description' => 'GoogleマップのURLを入力してください。',
+        'section' => 'ratpost_theme_companyprofile_options',
+        'type' => 'url',
+        'input_attrs' => array(
+            'placeholder' => '例）https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7477985333517!2d139.7432442159468!3d35.65858483881949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1591541670001!5m2!1sja!2sjp'
+        )
+    ));
 }
 add_action('customize_register','theme_customize_register_companyprofile');
 ?>

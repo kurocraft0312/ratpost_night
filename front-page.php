@@ -62,7 +62,7 @@
                 ?>
             </ul>
         </section>
-        <!-- 会社概要 -->
+        <!-- 会社概要（<th>タグとget_option('ratpost_theme_$変数[配列番号]_settings')を連想配列化する） -->
         <section class="contents-area">
             <h2 class="section-title">会社概要</h2>
             <table class="company-table">
@@ -110,8 +110,11 @@
                     <th>最寄り駅</th>
                     <td><?php echo get_option('ratpost_theme_nearest_station_settings'); ?></td>
                 </tr>
-                <!-- Googleマップ -->
             </table>
+            <!-- Googleマップ -->
+            <div class="company_map_section">
+                <iframe src="<?php echo get_option('ratpost_theme_maps_settings'); ?>" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="company_map"></iframe>
+            </div>
         </section>       
         <!-- お問い合わせフォーム -->
         <section class="contents-area">
