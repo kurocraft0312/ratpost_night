@@ -2,15 +2,14 @@
 <main>
     <!-- ヒーローヘッダー -->
     <section class="hero-header">
-        <h2 class="catchphrase"><?php echo get_option('ratpost_theme_settings'); ?></h2>
+        <h2 class="catchphrase"><?php echo get_option('ratpost_theme_catchphrase_settings'); ?></h2>
         <img src="dest/img/top-img.jpg" class="hero-header-img" alt="Ratpost_night">
     </section>
     <div class="container">
         <!-- メッセージ文 -->
         <section class="contents-area">
-            <h2 class="section-title">WEBのプロフェッショナル集団が、あなたの店舗の売上を最大化します</h2>
-            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
-            <p>ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+            <h2 class="section-title"><?php echo get_option('ratpost_theme_bodycopy_settings'); ?></h2>
+            <p><?php echo get_option('ratpost_theme_bodycopy_phrase_settings'); ?></p>
         </section>
         <!-- サービス一覧 -->
         <section class="contents-area">
@@ -21,24 +20,24 @@
                         <!-- ここにアイコンを刺す仕組みを作る -->
                         <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
-                    <h3>1.記事作成</h3>
-                    <p>分野の素人が読んでも理解できる文章を作成します。</p>
+                    <h3><?php echo get_option('ratpost_theme_servicelist_first_title_settings'); ?></h3>
+                    <p><?php echo get_option('ratpost_theme_servicelist_first_settings'); ?></p>
                 </div>
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
                         <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
-                    <h3>2.記事添削</h3>
-                    <p>誰でも読める文章になるよう文章を添削します。</p>
+                    <h3><?php echo get_option('ratpost_theme_servicelist_second_title_settings'); ?></h3>
+                    <p><?php echo get_option('ratpost_theme_servicelist_second_settings'); ?></p>
                 </div>
                 <div class="service-list">
                     <div class="box-icon">
                         <!-- ここにアイコンを刺す仕組みを作る -->
                         <img src="dest/img/top-img-test.jpg" class="box-icon-img" alt="">
                     </div>
-                    <h3>3.記事更新</h3>
-                    <p>世界中の方に読んでもらえるようネット上に文章を公開します。</p>
+                    <h3><?php echo get_option('ratpost_theme_servicelist_third_title_settings'); ?></h3>
+                    <p><?php echo get_option('ratpost_theme_servicelist_third_settings'); ?></p>
                 </div>
             </div>
         </section>
@@ -63,52 +62,60 @@
                 ?>
             </ul>
         </section>
-        <!-- 会社概要 -->
+        <!-- 会社概要（<th>タグとget_option('ratpost_theme_$変数[配列番号]_settings')を連想配列化する） -->
         <section class="contents-area">
             <h2 class="section-title">会社概要</h2>
             <table class="company-table">
                 <tr>
-                    <th>屋号</th>
-                    <td>Ratpost（ラットポスト）</td>
+                    <th>会社名</th>
+                    <td><?php echo get_option('ratpost_theme_companyname_settings'); ?></td>
                 </tr>
                 <tr>
-                    <th>代表者名（活動名）</th>
-                    <td>黒川　シュン（くろかわ　しゅん）</td>
+                    <th>設立</th>
+                    <td><?php echo get_option('ratpost_theme_establish_settings'); ?></td>
                 </tr>
                 <tr>
-                    <th>活動開始時期</th>
-                    <td>2020年6月～</td>
+                    <th>資本金</th>
+                    <td><?php echo get_option('ratpost_theme_capital_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>従業員数</th>
+                    <td><?php echo get_option('ratpost_theme_employees_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>代表名</th>
+                    <td><?php echo get_option('ratpost_theme_officer_settings'); ?></td>
                 </tr>
                 <tr>
                     <th>事業内容</th>
-                    <td>WEB制作/ホームページ制作</td>
-                </tr>
-                <tr>
-                    <th>取引先</th>
-                    <td>株式会社ラットポスト</td>
-                </tr>
-                <tr>
-                    <th>事務所所在地</th>
-                    <td>〒332-0006</td>
-                </tr>
-                <tr>
-                    <th>最寄り駅</th>
-                    <td>川口駅</td>
+                    <td><?php echo get_option('ratpost_theme_business_settings'); ?></td>
                 </tr>
                 <tr>
                     <th>営業時間</th>
-                    <td>平日・土日祝日</td>
+                    <td><?php echo get_option('ratpost_theme_businesshours_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>TEL</th>
+                    <td><?php echo get_option('ratpost_theme_businesstel_settings'); ?></td>
                 </tr>
                 <tr>
                     <th>ご連絡先</th>
-                    <td>kurocraft0312@gmail.com</td>
+                    <td><?php echo get_option('ratpost_theme_email_settings'); ?></td>
                 </tr>
                 <tr>
-                    <th>事務所アクセス</th>
-                    <td>埼玉県川口駅徒歩8分</td>
+                    <th>本社所在地</th>
+                    <td><?php echo get_option('ratpost_theme_location_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>最寄り駅</th>
+                    <td><?php echo get_option('ratpost_theme_nearest_station_settings'); ?></td>
                 </tr>
             </table>
-        </section>        
+            <!-- Googleマップ -->
+            <div class="company_map_section">
+                <iframe src="<?php echo get_option('ratpost_theme_maps_settings'); ?>" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="company_map"></iframe>
+            </div>
+        </section>       
         <!-- お問い合わせフォーム -->
         <section class="contents-area">
             <h2 class="section-title">ご依頼・ご相談はコチラから</h2>
