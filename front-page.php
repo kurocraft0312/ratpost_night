@@ -67,47 +67,52 @@
             <h2 class="section-title">会社概要</h2>
             <table class="company-table">
                 <tr>
-                    <th>屋号</th>
-                    <td>Ratpost（ラットポスト）</td>
+                    <th>会社名</th>
+                    <td><?php echo get_option('ratpost_theme_companyname_settings'); ?></td>
                 </tr>
                 <tr>
-                    <th>代表者名（活動名）</th>
-                    <td>黒川　シュン（くろかわ　しゅん）</td>
+                    <th>設立</th>
+                    <td><?php echo get_option('ratpost_theme_establish_settings'); ?></td>
                 </tr>
                 <tr>
-                    <th>活動開始時期</th>
-                    <td>2020年6月～</td>
+                    <th>資本金</th>
+                    <td><?php echo get_option('ratpost_theme_capital_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>従業員数</th>
+                    <td><?php echo get_option('ratpost_theme_employees_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>代表名</th>
+                    <td><?php echo get_option('ratpost_theme_officer_settings'); ?></td>
                 </tr>
                 <tr>
                     <th>事業内容</th>
-                    <td>WEB制作/ホームページ制作</td>
-                </tr>
-                <tr>
-                    <th>取引先</th>
-                    <td>株式会社ラットポスト</td>
-                </tr>
-                <tr>
-                    <th>事務所所在地</th>
-                    <td>〒332-0006</td>
-                </tr>
-                <tr>
-                    <th>最寄り駅</th>
-                    <td>川口駅</td>
+                    <td><?php echo get_option('ratpost_theme_business_settings'); ?></td>
                 </tr>
                 <tr>
                     <th>営業時間</th>
-                    <td>平日・土日祝日</td>
+                    <td><?php echo get_option('ratpost_theme_businesshours_settings'); ?></td>
+                </tr>
+                <tr>
+                    <th>TEL</th>
+                    <td><?php echo get_option('ratpost_theme_businesstel_settings'); ?></td>
                 </tr>
                 <tr>
                     <th>ご連絡先</th>
-                    <td>kurocraft0312@gmail.com</td>
+                    <td><?php echo get_option('ratpost_theme_email_settings'); ?></td>
                 </tr>
                 <tr>
-                    <th>事務所アクセス</th>
-                    <td>埼玉県川口駅徒歩8分</td>
+                    <th>本社所在地</th>
+                    <td><?php echo get_option('ratpost_theme_location_settings'); ?></td>
                 </tr>
+                <tr>
+                    <th>最寄り駅</th>
+                    <td><?php echo get_option('ratpost_theme_nearest_station_settings'); ?></td>
+                </tr>
+                <!-- Googleマップ -->
             </table>
-        </section>        
+        </section>       
         <!-- お問い合わせフォーム -->
         <section class="contents-area">
             <h2 class="section-title">ご依頼・ご相談はコチラから</h2>
