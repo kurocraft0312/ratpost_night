@@ -11,6 +11,8 @@
             <h2 class="section-title"><?php echo get_option('ratpost_theme_bodycopy_settings'); ?></h2>
             <p><?php echo get_option('ratpost_theme_bodycopy_phrase_settings'); ?></p>
         </section>
+    </div>
+    <div class="container">
         <!-- サービス一覧 -->
         <section class="contents-area">
             <h2 class="section-title">サービス一覧</h2>
@@ -41,6 +43,8 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div class="container">
         <!-- ニュース一覧 -->
         <section class="contents-area">
             <h2 class="section-title">ニュース一覧</h2>
@@ -62,6 +66,8 @@
                 ?>
             </ul>
         </section>
+    </div>
+    <div class="container">
         <!-- 会社概要（<th>タグとget_option('ratpost_theme_$変数[配列番号]_settings')を連想配列化する） -->
         <section class="contents-area">
             <h2 class="section-title">会社概要</h2>
@@ -111,6 +117,7 @@
                     <td><?php echo get_option('ratpost_theme_nearest_station_settings'); ?></td>
                 </tr>
             </table>
+        </div>
             <!-- Googleマップ -->
             <div class="company_map_section">
                 <iframe src="<?php echo get_option('ratpost_theme_maps_settings'); ?>" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="company_map"></iframe>
